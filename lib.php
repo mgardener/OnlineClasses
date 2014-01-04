@@ -10,13 +10,17 @@ class CitrixAPI {
     }
 
     public function getOAuthToken ($_apiKey = null, $_callbackUrl = null) {
-        if (isset($_GET['authorize']) && (int)$_GET['authorize'] == 1) {
+
+        $authorize = optional_param('authorize', FALSE, PARAM_INT);
+        $code      = optional_param('code', FALSE, PARAM_INT);
+
+        if ($authorize == 1) {
             header('location:https://api.citrixonline.com/oauth/authorize?client_id='. $_apiKey .'&redirect_uri=' . $_callbackUrl);
             exit();
         }
 
-        if (isset($_GET['code'])) {
-            $url = 'https://api.citrixonline.com/oauth/access_token?grant_type=authorization_code&code='. $_GET['code'] .'&client_id='. $_apiKey;
+        if ($code) {
+            $url = 'https://api.citrixonline.com/oauth/access_token?grant_type=authorization_code&code='. $code .'&client_id='. $_apiKey;
             return $this->makeApiRequest($url);
         }
     }
