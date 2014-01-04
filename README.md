@@ -1,7 +1,7 @@
 CISSQ - OnlineClasses
 =============
 
-Locate the plugin manual here for more information about this plugin: http://cissq.com/OnlineClasses
+Locate the plugin manual here for more information about this plugin: http://cissq.com/online-classes-block
 
 ============================================
 
