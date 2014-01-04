@@ -1,7 +1,9 @@
 CISSQ - OnlineClasses
 =============
 
-Locate the plugin manual here for more information about this plugin: http://cissq.com/online-classes-block
+Moodle/GoToMeeting Integration
+
+More information about this plugin: http://cissq.com/online-classes-block
 
 ============================================
 
